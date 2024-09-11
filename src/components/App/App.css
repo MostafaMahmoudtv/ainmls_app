@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+ul{
+
+display: flex;
+padding:0 ;
+
+}
+li{
+
+margin: 0 20px;
+list-style: none;
+padding: 0;
+font-size: 2em;
+border: 0;
+padding: 0;
+background: none;
+cursor: pointer;
+
+}
+li:hover{
+background-color: rgb(125, 139, 139);
+}
+.emoheader{
+background-color: rgb(223, 255, 39);
+border: 3px solid black;
+margin: 5px;
+padding: 8px;
+}
