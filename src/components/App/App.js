@@ -1,29 +1,24 @@
-import { React } from "react";
+import React from "react";
 import "./App.css";
-import Instructions from "../Instructions/Instructions";
-const emojis = [
-  {
-    emoji: "😄",
-    name: "HAPPY FACE",
-  },
-  { emoji: "🎉", name: "HAPPY PARTY" },
-  { emoji: "💃", name: "WOMAN DANCING" },
-];
-const displayAction = true;
+import data from "./data";
+import AnimalCard from "../AnimalCard/AnimalCard";
 function App() {
   return (
-    <div className="container">
-      <h1>Hello</h1>
-
-      {displayAction && <p>Are you Ready</p>}
-      <Instructions />
-
-      <ul>
-        {emojis.map((emoji) => (
-          <li onClick={(event) => alert(emoji.name)}>{emoji.emoji}</li>
-        ))}
-      </ul>
+    <div className="wrapper">
+      <h1>Animals</h1>
+      {data.map((animal) => (
+        <AnimalCard
+          key={animal.name}
+          name={animal.name}
+          sname={animal.scientificName}
+          size={animal.size}
+          diet={animal.diet}
+          additional={animal.additional.notes}
+          additional2={animal.additional.link}
+        />
+      ))}
     </div>
   );
 }
+
 export default App;
